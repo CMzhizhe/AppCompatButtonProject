@@ -9,3 +9,15 @@ button 按钮，设置左边的小图标，与文字居中
 - 支持左右自定义小图标
 
 ![效果图](https://github.com/CMzhizhe/AppCompatButtonProject/blob/master/pic/pic.png)
+
+
+```
+repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+
+dependencies {
+	    implementation 'com.github.CMzhizhe:AppCompatButtonProject:1.0.0'
+	}
+```
