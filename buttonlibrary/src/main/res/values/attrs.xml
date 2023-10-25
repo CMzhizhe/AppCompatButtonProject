@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DrawableLeftCenterButton">
+        <attr name="dl_dis" format="dimension|reference"/>
+        <attr name="dl_width" format="dimension|reference"/>
+        <attr name="dl_height" format="dimension|reference"/>
+    </declare-styleable>
+</resources>
