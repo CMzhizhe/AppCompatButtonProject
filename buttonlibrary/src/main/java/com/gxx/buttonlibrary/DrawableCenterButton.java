@@ -17,17 +17,17 @@ import androidx.appcompat.widget.AppCompatButton;
 /**
  * drawableRight与文本一起居中显示
  */
-public class DrawableLeftCenterButton extends AppCompatButton {
+public class DrawableCenterButton extends AppCompatButton {
     private int picDistance = 0;
     private int picWidth = 0;
     private int picHeight = 0;
 
-    public DrawableLeftCenterButton(Context context, AttributeSet attrs) {
+    public DrawableCenterButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.DrawableLeftCenterButton);
-        picDistance = ta.getDimensionPixelOffset(R.styleable.DrawableLeftCenterButton_dl_dis,0);
-        picWidth = ta.getDimensionPixelOffset(R.styleable.DrawableLeftCenterButton_dl_width,0);
-        picHeight = ta.getDimensionPixelOffset(R.styleable.DrawableLeftCenterButton_dl_height,0);
+        TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.DrawableCenterButton);
+        picDistance = ta.getDimensionPixelOffset(R.styleable.DrawableCenterButton_dl_dis,0);
+        picWidth = ta.getDimensionPixelOffset(R.styleable.DrawableCenterButton_dl_width,0);
+        picHeight = ta.getDimensionPixelOffset(R.styleable.DrawableCenterButton_dl_height,0);
         ta.recycle();
     }
 
@@ -44,14 +44,18 @@ public class DrawableLeftCenterButton extends AppCompatButton {
         if (drawables == null) {
             return canvas;
         }
+        boolean isLeftDrawable = true;//是否左边的drawable
         Drawable drawable = drawables[0];// 左面的drawable
+
         if (drawable == null) {
             drawable = drawables[2];// 右面的drawable
+            isLeftDrawable = false;
         }
 
         if (drawable == null){
             return canvas;
         }
+
 
         boolean isNeedScan = true;
 
@@ -60,18 +64,20 @@ public class DrawableLeftCenterButton extends AppCompatButton {
             isNeedScan = false;
         }
 
-        Bitmap oldBitmap = drawableToBitmap(drawable);
         Bitmap bitmap = null;
         if (isNeedScan){
-            bitmap = createScaledBitmap(oldBitmap,picWidth,picHeight);
+            bitmap = createScaledBitmap(drawableToBitmap(drawable),picWidth,picHeight);
         }else {
             bitmap = ((BitmapDrawable) drawable).getBitmap();
         }
 
         Drawable newDrawable =  new BitmapDrawable(null, bitmap);
         newDrawable.setBounds(0,0,bitmap.getWidth(),bitmap.getHeight());
-
-        setCompoundDrawables(newDrawable,null,null,null);
+        if (isLeftDrawable){
+            setCompoundDrawables(newDrawable,null,null,null);
+        }else {
+            setCompoundDrawables(null,null,newDrawable,null);
+        }
 
         float textSize = getPaint().measureText(getText().toString());
         int drawWidth = bitmap.getWidth();
@@ -105,6 +111,7 @@ public class DrawableLeftCenterButton extends AppCompatButton {
         return scaledBitmap;
 
     }
+
 
     private Bitmap drawableToBitmap(Drawable drawable) {
         int width = drawable.getIntrinsicWidth();

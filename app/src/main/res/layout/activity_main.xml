@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
 
-    <com.gxx.buttonlibrary.DrawableLeftCenterButton
+    <com.gxx.buttonlibrary.DrawableCenterButton
         android:layout_marginTop="10dp"
         android:clickable="true"
         android:layout_width="172dp"
@@ -21,7 +21,7 @@
         android:textColor="@color/white"
         android:textSize="18sp" />
 
-    <com.gxx.buttonlibrary.DrawableLeftCenterButton
+    <com.gxx.buttonlibrary.DrawableCenterButton
         android:layout_marginTop="10dp"
         android:clickable="true"
         android:layout_width="172dp"
@@ -36,7 +36,7 @@
         android:textColor="@color/white"
         android:textSize="18sp" />
 
-    <com.gxx.buttonlibrary.DrawableLeftCenterButton
+    <com.gxx.buttonlibrary.DrawableCenterButton
         android:layout_marginTop="10dp"
         android:clickable="true"
         android:layout_width="172dp"
@@ -52,7 +52,7 @@
         android:textSize="18sp" />
 
 
-    <com.gxx.buttonlibrary.DrawableLeftCenterButton
+    <com.gxx.buttonlibrary.DrawableCenterButton
         android:layout_marginTop="10dp"
         android:clickable="true"
         android:layout_width="172dp"
@@ -67,5 +67,19 @@
         android:textColor="@color/white"
         android:textSize="18sp" />
 
+    <com.gxx.buttonlibrary.DrawableCenterButton
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:layout_width="172dp"
+        android:layout_height="55dp"
+        app:dl_dis="20dp"
+        app:dl_width="22dp"
+        app:dl_height="22dp"
+        android:gravity="center"
+        android:background="@drawable/ripple_c899fc_solid_7904fd_radius_50"
+        android:drawableRight="@drawable/down"
+        android:text="Download"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
 </LinearLayout>
