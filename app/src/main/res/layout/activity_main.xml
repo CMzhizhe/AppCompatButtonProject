@@ -2,11 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/black"
+    android:background="@color/white"
     android:orientation="vertical"
     android:layout_height="match_parent">
 
     <com.gxx.buttonlibrary.DrawableLeftCenterButton
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:layout_width="172dp"
+        android:layout_height="55dp"
+        app:dl_dis="10dp"
+        app:dl_width="30dp"
+        app:dl_height="30dp"
+        android:gravity="center"
+        android:background="@drawable/ripple_c899fc_solid_7904fd_radius_50"
+        android:drawableStart="@drawable/down"
+        android:text="Download"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <com.gxx.buttonlibrary.DrawableLeftCenterButton
+        android:layout_marginTop="10dp"
         android:clickable="true"
         android:layout_width="172dp"
         android:layout_height="55dp"
@@ -18,8 +34,38 @@
         android:drawableStart="@drawable/down"
         android:text="Download"
         android:textColor="@color/white"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 
+    <com.gxx.buttonlibrary.DrawableLeftCenterButton
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:layout_width="172dp"
+        android:layout_height="55dp"
+        app:dl_dis="10dp"
+        app:dl_width="10dp"
+        app:dl_height="10dp"
+        android:gravity="center"
+        android:background="@drawable/ripple_c899fc_solid_7904fd_radius_50"
+        android:drawableStart="@drawable/down"
+        android:text="Download"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+    <com.gxx.buttonlibrary.DrawableLeftCenterButton
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:layout_width="172dp"
+        android:layout_height="55dp"
+        app:dl_dis="5dp"
+        app:dl_width="5dp"
+        app:dl_height="5dp"
+        android:gravity="center"
+        android:background="@drawable/ripple_c899fc_solid_7904fd_radius_50"
+        android:drawableStart="@drawable/down"
+        android:text="Download"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
 
 </LinearLayout>
