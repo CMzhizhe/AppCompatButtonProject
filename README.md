@@ -18,13 +18,13 @@ implementation 'com.github.CMzhizhe:AppCompatButtonProject:1.0.0'
 ```
  <com.gxx.buttonlibrary.DrawableCenterButton
         android:layout_marginTop="10dp"
-        android:clickable="true"
+        android:clickable="true" 
         android:layout_width="172dp"
         android:layout_height="55dp"
         app:dl_dis="10dp" //文字图片距离
         app:dl_width="30dp" //宽高
         app:dl_height="30dp"
-        android:gravity="center"
+        android:gravity="center" //居中
         android:background="@drawable/ripple_c899fc_solid_7904fd_radius_50"
         android:drawableStart="@drawable/down" //设置左边，右边就用 android:drawableRight
         android:text="Download"
